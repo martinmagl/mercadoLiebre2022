@@ -1,0 +1,394 @@
+@import url('normalize.css');
+
+:root {
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo,
+header .form{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    
+    
+}
+
+div.burger-menu{
+    text-align: center;
+    animation: hamburguesa 3s infinite;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuento{
+    width: 70%;
+    color: #39b54a;
+}
+
+.descuento,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.descripcion{
+    color: #666;
+}
+
+.descripcion {
+    display: none;
+    margin-top: 20px;
+    
+}
+
+section.banner img{
+    width: 100%;
+}
+/*-------------------------- MAIN ---------------------------- */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+article{
+    justify-content:center;
+}
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.descuento{
+    color: #39b54a;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+article{
+    text-align: center;
+}
+i{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+main section article i:hover{
+transform:rotate(90deg);
+}
+
+/*--------------------------------- FOOTER-------------------- */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 30px 20px 60px;
+    background-color: #fff;
+    width: 100%;
+}
+.footer-section {
+    width: 100%;
+  }
+  .footer-section i {
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+
+
+  }
+  footer p{
+      margin-top: 10px;
+  }
+footer section {
+    padding: 30px px 0;
+}
+    footer i{
+        color:var(--celeste);
+    }
+
+
+/*--------------------------ADAPTATIVO-----------------*/
+
+@media (min-width: 361px){
+    main section article .descripcion{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .precio,
+    .descuento{
+        width: 50%;
+    }
+    .camion i:hover{
+        transform:rotate(90deg);
+        }
+        .footer-section {
+            width: 30%;
+          }
+          
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+article{
+    width: 45%;
+    box-shadow: 0px 0px 10px rgb(100,100,100, 0);
+    transition: all 1s;
+}
+article:hover{
+    box-shadow: 0px 0px 10px rgb(100,100,100,1);
+}
+.burger-menu{
+    display: none;
+}
+.camion i:hover{
+    transform:rotate(90deg);
+    }
+    footer section{
+        width: 30%;
+    }
+    .descripcion{
+        display: flex;
+        opacity: 0;
+        transition: opacity, 1s;
+    }
+    .descripcion:hover{
+        opacity: 1;
+    }
+    article{
+    
+    width: 45%;
+    box-shadow: 0px 0px 10px rgba(100,100,100,0);
+transition: all 2s;
+    }
+    
+}
+
+/*-------------------------- FORM ----------------*/
+
+
+form{
+    
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+    width: 100%;
+
+}
+input{
+    padding: 7px;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    
+}
+
+button{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--celeste);
+    padding: 20px;
+    border:none;
+    border-radius: 5px;
+    color: #fff;
+    height:30px;
+}
+
+button:hover{
+    background-color: var(--azul);
+
+}
+
+.password{
+    display: flex;
+
+}
+
+
+/*-------------------------- ALGUNOS BOTONES ------------------------ */
+
+@keyframes hamburguesa{
+    0% { opacity: 0%;}
+    25%{transform:translateY(-20%); opacity: 100%;}
+    100%{opacity:0%}
+
+}
+
+.Enviar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--celeste);
+    padding: 20px;
+    border:none;
+    border-radius: 5px;
+    color: #FFF;
+    height:30px;
+}
+.Enviar:hover{
+    background-color: var(--azul);
+}
+.Borrar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--celeste);
+    padding: 20px;
+    color: #FFF;
+    border:none;
+    border-radius: 5px;
+    /* color: var(--azul); */
+    height:30px;
+}
+.Borrar:hover{
+    background-color: var(--azul);
+}
+
